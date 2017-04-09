@@ -168,8 +168,8 @@
         <translation>تأكيد تشفير المحفظة</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>تحذير: إذا قمت بتشفير محفظتك وفقدت كلمة المرور الخاص بك, ستفقد كل عملات BITCOINS الخاصة بك.</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DETKCOINS&lt;/b&gt;!</source>
+        <translation>تحذير: إذا قمت بتشفير محفظتك وفقدت كلمة المرور الخاص بك, ستفقد كل عملات DETKCOINS الخاصة بك.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -394,7 +394,7 @@
         <translation>شريط أدوات علامات التبويب</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and detkcoin: URIs)</source>
         <translation>أطلب دفعات (يولد كودات الرمز المربع وبيت كوين: العناوين المعطاة)</translation>
     </message>
     <message>
@@ -406,7 +406,7 @@
         <translation>عرض قائمة عناوين الإستقبال المستخدمة والملصقات</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
+        <source>Open a detkcoin: URI or payment request</source>
         <translation>فتح URI : Bitcoin أو طلب دفع</translation>
     </message>
     <message>
@@ -1922,7 +1922,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>detkcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>خيارات: </translation>

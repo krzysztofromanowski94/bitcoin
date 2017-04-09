@@ -1,6 +1,6 @@
 #include "wallettests.h"
 
-#include "qt/bitcoinamountfield.h"
+#include "qt/detkcoinamountfield.h"
 #include "qt/optionsmodel.h"
 #include "qt/platformstyle.h"
 #include "qt/qvalidatedlineedit.h"
@@ -8,7 +8,7 @@
 #include "qt/sendcoinsentry.h"
 #include "qt/transactiontablemodel.h"
 #include "qt/walletmodel.h"
-#include "test/test_bitcoin.h"
+#include "test/test_detkcoin.h"
 #include "validation.h"
 #include "wallet/wallet.h"
 

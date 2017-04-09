@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RANDOM_H
-#define BITCOIN_RANDOM_H
+#ifndef DETKCOIN_RANDOM_H
+#define DETKCOIN_RANDOM_H
 
 #include "uint256.h"
 
@@ -63,4 +63,4 @@ void GetOSRand(unsigned char *ent32);
  */
 bool Random_SanityCheck();
 
-#endif // BITCOIN_RANDOM_H
+#endif // DETKCOIN_RANDOM_H

@@ -100,7 +100,7 @@
         <translation>Potvrdite šifrovanje novčanika</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DETKCOINS&lt;/b&gt;!</source>
         <translation>Upozorenje: Ako šifrujete svoj novčanik, i potom izgubite svoju pristupnu frazu &lt;b&gt;IZGUBIĆETE SVE SVOJE BITKOINE&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -404,7 +404,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>detkcoin-core</name>
     <message>
         <source>Bitcoin Core</source>
         <translation>Bitcoin Core</translation>

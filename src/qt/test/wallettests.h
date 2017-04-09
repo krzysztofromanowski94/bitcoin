@@ -1,5 +1,5 @@
-#ifndef BITCOIN_QT_TEST_WALLETTESTS_H
-#define BITCOIN_QT_TEST_WALLETTESTS_H
+#ifndef DETKCOIN_QT_TEST_WALLETTESTS_H
+#define DETKCOIN_QT_TEST_WALLETTESTS_H
 
 #include <QObject>
 #include <QTest>
@@ -12,4 +12,4 @@ private Q_SLOTS:
     void walletTests();
 };
 
-#endif // BITCOIN_QT_TEST_WALLETTESTS_H
+#endif // DETKCOIN_QT_TEST_WALLETTESTS_H

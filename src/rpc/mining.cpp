@@ -126,7 +126,7 @@ UniValue generateBlocks(boost::shared_ptr<CReserveScript> coinbaseScript, int nG
         if (nMaxTries == 0) {
             break;
         }
-        if (pblock->nNonce == nInnerLoopCount) {
+        if (pblock->nNonce == nInnerLoopCount) { //resume
             continue;
         }
         std::shared_ptr<const CBlock> shared_pblock = std::make_shared<const CBlock>(*pblock);
@@ -188,7 +188,7 @@ UniValue generatetoaddress(const JSONRPCRequest& request)
             "\nMine blocks immediately to a specified address (before the RPC call returns)\n"
             "\nArguments:\n"
             "1. nblocks      (numeric, required) How many blocks are generated immediately.\n"
-            "2. address      (string, required) The address to send the newly generated bitcoin to.\n"
+            "2. address      (string, required) The address to send the newly generated detkcoin to.\n"
             "3. maxtries     (numeric, optional) How many iterations to try (default = 1000000).\n"
             "\nResult:\n"
             "[ blockhashes ]     (array) hashes of blocks generated\n"
@@ -318,10 +318,10 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
             "\nIf the request parameters include a 'mode' key, that is used to explicitly select between the default 'template' request or a 'proposal'.\n"
             "It returns data needed to construct a block to work on.\n"
             "For full specification, see BIPs 22, 23, 9, and 145:\n"
-            "    https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki\n"
-            "    https://github.com/bitcoin/bips/blob/master/bip-0023.mediawiki\n"
-            "    https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki#getblocktemplate_changes\n"
-            "    https://github.com/bitcoin/bips/blob/master/bip-0145.mediawiki\n"
+            "    https://github.com/detkcoin/bips/blob/master/bip-0022.mediawiki\n"
+            "    https://github.com/detkcoin/bips/blob/master/bip-0023.mediawiki\n"
+            "    https://github.com/detkcoin/bips/blob/master/bip-0009.mediawiki#getblocktemplate_changes\n"
+            "    https://github.com/detkcoin/bips/blob/master/bip-0145.mediawiki\n"
 
             "\nArguments:\n"
             "1. template_request         (json object, optional) A json object in the following spec\n"
@@ -724,7 +724,7 @@ UniValue submitblock(const JSONRPCRequest& request)
             "submitblock \"hexdata\" ( \"jsonparametersobject\" )\n"
             "\nAttempts to submit new block to network.\n"
             "The 'jsonparametersobject' parameter is currently ignored.\n"
-            "See https://en.bitcoin.it/wiki/BIP_0022 for full specification.\n"
+            "See https://en.detkcoin.it/wiki/BIP_0022 for full specification.\n"
 
             "\nArguments\n"
             "1. \"hexdata\"        (string, required) the hex-encoded block data to submit\n"

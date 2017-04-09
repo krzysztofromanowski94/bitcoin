@@ -238,16 +238,16 @@
         <translation>Barre d'outils des onglets</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Demander des paiements (générer QR codes et bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and detkcoin: URIs)</source>
+        <translation>Demander des paiements (générer QR codes et detkcoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
         <translation>Montrer la liste des adresses d'envois utilisées et les étiquettes</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Ouvrir un bitcoin: URI ou demande de paiement</translation>
+        <source>Open a detkcoin: URI or payment request</source>
+        <translation>Ouvrir un detkcoin: URI ou demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1332,7 +1332,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>detkcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Options :</translation>

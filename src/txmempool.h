@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_TXMEMPOOL_H
-#define BITCOIN_TXMEMPOOL_H
+#ifndef DETKCOIN_TXMEMPOOL_H
+#define DETKCOIN_TXMEMPOOL_H
 
 #include <memory>
 #include <set>
@@ -690,4 +690,4 @@ public:
     bool HaveCoins(const uint256 &txid) const;
 };
 
-#endif // BITCOIN_TXMEMPOOL_H
+#endif // DETKCOIN_TXMEMPOOL_H

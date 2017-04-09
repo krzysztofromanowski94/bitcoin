@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_BITCOINUNITS_H
-#define BITCOIN_QT_BITCOINUNITS_H
+#ifndef DETKCOIN_QT_DETKCOINUNITS_H
+#define DETKCOIN_QT_DETKCOINUNITS_H
 
 #include "amount.h"
 
@@ -52,7 +52,7 @@ public:
     explicit BitcoinUnits(QObject *parent);
 
     /** Bitcoin units.
-      @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
+      @note Source: https://en.detkcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
@@ -125,4 +125,4 @@ private:
 };
 typedef BitcoinUnits::Unit BitcoinUnit;
 
-#endif // BITCOIN_QT_BITCOINUNITS_H
+#endif // DETKCOIN_QT_DETKCOINUNITS_H

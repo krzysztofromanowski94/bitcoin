@@ -6,8 +6,8 @@
 /**
  * Utilities for converting data from/to strings.
  */
-#ifndef BITCOIN_UTILSTRENCODINGS_H
-#define BITCOIN_UTILSTRENCODINGS_H
+#ifndef DETKCOIN_UTILSTRENCODINGS_H
+#define DETKCOIN_UTILSTRENCODINGS_H
 
 #include <stdint.h>
 #include <string>
@@ -145,4 +145,4 @@ bool TimingResistantEqual(const T& a, const T& b)
  */
 bool ParseFixedPoint(const std::string &val, int decimals, int64_t *amount_out);
 
-#endif // BITCOIN_UTILSTRENCODINGS_H
+#endif // DETKCOIN_UTILSTRENCODINGS_H

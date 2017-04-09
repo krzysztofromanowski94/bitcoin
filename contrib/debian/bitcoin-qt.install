@@ -1,6 +1,6 @@
-usr/local/bin/bitcoin-qt usr/bin
-share/pixmaps/bitcoin32.xpm usr/share/pixmaps
-share/pixmaps/bitcoin16.xpm usr/share/pixmaps
-share/pixmaps/bitcoin128.png usr/share/pixmaps
-debian/bitcoin-qt.desktop usr/share/applications
-debian/bitcoin-qt.protocol usr/share/kde4/services/
+usr/local/bin/detkcoin-qt usr/bin
+share/pixmaps/detkcoin32.xpm usr/share/pixmaps
+share/pixmaps/detkcoin16.xpm usr/share/pixmaps
+share/pixmaps/detkcoin128.png usr/share/pixmaps
+debian/detkcoin-qt.desktop usr/share/applications
+debian/detkcoin-qt.protocol usr/share/kde4/services/

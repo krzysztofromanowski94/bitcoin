@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/bitcoin-config.h"
+#include "config/detkcoin-config.h"
 #endif
 
 #include "util.h"
@@ -99,8 +99,8 @@ namespace boost {
 
 
 
-const char * const BITCOIN_CONF_FILENAME = "bitcoin.conf";
-const char * const BITCOIN_PID_FILENAME = "bitcoind.pid";
+const char * const DETKCOIN_CONF_FILENAME = "detkcoin.conf";
+const char * const DETKCOIN_PID_FILENAME = "detkcoind.pid";
 
 CCriticalSection cs_args;
 std::map<std::string, std::string> mapArgs;
@@ -458,7 +458,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "bitcoin";
+    const char* pszModule = "detkcoin";
 #endif
     if (pex)
         return strprintf(
@@ -481,7 +481,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\Bitcoin
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\Bitcoin
     // Mac: ~/Library/Application Support/Bitcoin
-    // Unix: ~/.bitcoin
+    // Unix: ~/.detkcoin
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "Bitcoin";
@@ -497,7 +497,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/Bitcoin";
 #else
     // Unix
-    return pathRet / ".bitcoin";
+    return pathRet / ".detkcoin";
 #endif
 #endif
 }
@@ -557,7 +557,7 @@ void ReadConfigFile(const std::string& confPath)
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile(confPath));
     if (!streamConfig.good())
-        return; // No bitcoin.conf file is OK
+        return; // No detkcoin.conf file is OK
 
     {
         LOCK(cs_args);
@@ -566,7 +566,7 @@ void ReadConfigFile(const std::string& confPath)
 
         for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
         {
-            // Don't overwrite existing settings so command line settings override bitcoin.conf
+            // Don't overwrite existing settings so command line settings override detkcoin.conf
             std::string strKey = std::string("-") + it->string_key;
             std::string strValue = it->value[0];
             InterpretNegativeSetting(strKey, strValue);
@@ -582,7 +582,7 @@ void ReadConfigFile(const std::string& confPath)
 #ifndef WIN32
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", BITCOIN_PID_FILENAME));
+    boost::filesystem::path pathPidFile(GetArg("-pid", DETKCOIN_PID_FILENAME));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }

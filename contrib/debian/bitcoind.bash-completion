@@ -1,2 +1,2 @@
-contrib/bitcoind.bash-completion	bitcoind
-contrib/bitcoin-cli.bash-completion	bitcoin-cli
+contrib/detkcoind.bash-completion	detkcoind
+contrib/detkcoin-cli.bash-completion	detkcoin-cli

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_DBWRAPPER_H
-#define BITCOIN_DBWRAPPER_H
+#ifndef DETKCOIN_DBWRAPPER_H
+#define DETKCOIN_DBWRAPPER_H
 
 #include "clientversion.h"
 #include "serialize.h"
@@ -284,5 +284,5 @@ public:
     bool IsEmpty();
 };
 
-#endif // BITCOIN_DBWRAPPER_H
+#endif // DETKCOIN_DBWRAPPER_H
 

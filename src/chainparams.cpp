@@ -48,6 +48,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  *     CTxOut(nValue=50.00000000, scriptPubKey=0x5F1DF16B2B704C8A578D0B)
  *   vMerkleTree: 4a5e1e
  */
+
+ // ToDo
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks";
@@ -70,14 +72,14 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 210000;
+        consensus.nSubsidyHalvingInterval = 210000; // Todo
         consensus.BIP34Height = 227931;
         consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8");
         consensus.BIP65Height = 388381; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP66Height = 363725; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
         consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
-        consensus.nPowTargetSpacing = 10 * 60;
+        consensus.nPowTargetSpacing = 10 * 60; // ToDo
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
@@ -114,17 +116,18 @@ public:
         nDefaultPort = 8333;
         nPruneAfterHeight = 100000;
 
+        // ToDo
         genesis = CreateGenesisBlock(1231006505, 2083236893, 0x1d00ffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"));
         assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("bitcoin.sipa.be", "seed.bitcoin.sipa.be", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
+        vSeeds.push_back(CDNSSeedData("detkcoin.sipa.be", "seed.detkcoin.sipa.be", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
         vSeeds.push_back(CDNSSeedData("bluematt.me", "dnsseed.bluematt.me", true)); // Matt Corallo, only supports x9
-        vSeeds.push_back(CDNSSeedData("dashjr.org", "dnsseed.bitcoin.dashjr.org")); // Luke Dashjr
-        vSeeds.push_back(CDNSSeedData("bitcoinstats.com", "seed.bitcoinstats.com", true)); // Christian Decker, supports x1 - xf
-        vSeeds.push_back(CDNSSeedData("bitcoin.jonasschnelli.ch", "seed.bitcoin.jonasschnelli.ch", true)); // Jonas Schnelli, only supports x1, x5, x9, and xd
+        vSeeds.push_back(CDNSSeedData("dashjr.org", "dnsseed.detkcoin.dashjr.org")); // Luke Dashjr
+        vSeeds.push_back(CDNSSeedData("detkcoinstats.com", "seed.detkcoinstats.com", true)); // Christian Decker, supports x1 - xf
+        vSeeds.push_back(CDNSSeedData("detkcoin.jonasschnelli.ch", "seed.detkcoin.jonasschnelli.ch", true)); // Jonas Schnelli, only supports x1, x5, x9, and xd
         vSeeds.push_back(CDNSSeedData("petertodd.org", "seed.btc.petertodd.org", true)); // Peter Todd, only supports x1, x5, x9, and xd
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
@@ -139,6 +142,7 @@ public:
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
 
+        // ToDo
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             ( 11111, uint256S("0x0000000069e244f73d78e8fd29ba2fd2ed618bd6fa2ee92559f542fdb26e7c1d"))
@@ -181,7 +185,7 @@ public:
         consensus.BIP66Height = 330776; // 000000002104c8c45e99a8853285a3b592602a3ccde2b832481da85e9e4ba182
         consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
-        consensus.nPowTargetSpacing = 10 * 60;
+        consensus.nPowTargetSpacing = 10 * 60; // Todo
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1512; // 75% for testchains
@@ -221,10 +225,10 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("testnetbitcoin.jonasschnelli.ch", "testnet-seed.bitcoin.jonasschnelli.ch", true));
+        vSeeds.push_back(CDNSSeedData("testnetdetkcoin.jonasschnelli.ch", "testnet-seed.detkcoin.jonasschnelli.ch", true));
         vSeeds.push_back(CDNSSeedData("petertodd.org", "seed.tbtc.petertodd.org", true));
         vSeeds.push_back(CDNSSeedData("bluematt.me", "testnet-seed.bluematt.me"));
-        vSeeds.push_back(CDNSSeedData("bitcoin.schildbach.de", "testnet-seed.bitcoin.schildbach.de"));
+        vSeeds.push_back(CDNSSeedData("detkcoin.schildbach.de", "testnet-seed.detkcoin.schildbach.de"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
@@ -269,7 +273,7 @@ public:
         consensus.BIP66Height = 1251; // BIP66 activated on regtest (Used in rpc activation tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
-        consensus.nPowTargetSpacing = 10 * 60;
+        consensus.nPowTargetSpacing = 10 * 60; // ToDo
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 108; // 75% for testchains
@@ -364,4 +368,3 @@ void UpdateRegtestBIP9Parameters(Consensus::DeploymentPos d, int64_t nStartTime,
 {
     regTestParams.UpdateBIP9Parameters(d, nStartTime, nTimeout);
 }
- 

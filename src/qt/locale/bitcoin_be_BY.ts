@@ -168,7 +168,7 @@
         <translation>Пацвердзіце шыфраванне гаманца</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DETKCOINS&lt;/b&gt;!</source>
         <translation>Увага: калі вы зашыфруеце свой гаманец і страціце парольную фразу, то &lt;b&gt;СТРАЦІЦЕ ЎСЕ СВАЕ БІТКОЙНЫ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -370,7 +370,7 @@
         <translation>Дапамога</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and detkcoin: URIs)</source>
         <translation>Запатрабаваць плацёж (генеруецца QR-код для біткойн URI)</translation>
     </message>
     <message>
@@ -382,7 +382,7 @@
         <translation>Паказаць спіс адрасоў і метак для прымання</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
+        <source>Open a detkcoin: URI or payment request</source>
         <translation>Адкрыць біткойн: URI ці запыт плацяжу</translation>
     </message>
     <message>
@@ -1240,7 +1240,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>detkcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Опцыі:</translation>

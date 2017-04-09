@@ -3,13 +3,13 @@ Description=Bitcoin's distributed currency daemon
 After=network.target
 
 [Service]
-User=bitcoin
-Group=bitcoin
+User=detkcoin
+Group=detkcoin
 
 Type=forking
-PIDFile=/var/lib/bitcoind/bitcoind.pid
-ExecStart=/usr/bin/bitcoind -daemon -pid=/var/lib/bitcoind/bitcoind.pid \
--conf=/etc/bitcoin/bitcoin.conf -datadir=/var/lib/bitcoind -disablewallet
+PIDFile=/var/lib/detkcoind/detkcoind.pid
+ExecStart=/usr/bin/detkcoind -daemon -pid=/var/lib/detkcoind/detkcoind.pid \
+-conf=/etc/detkcoin/detkcoin.conf -datadir=/var/lib/detkcoind -disablewallet
 
 Restart=always
 PrivateTmp=true

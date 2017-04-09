@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPCSERVER_H
-#define BITCOIN_RPCSERVER_H
+#ifndef DETKCOIN_RPCSERVER_H
+#define DETKCOIN_RPCSERVER_H
 
 #include "amount.h"
 #include "rpc/protocol.h"
@@ -204,4 +204,4 @@ void RPCNotifyBlockChange(bool ibd, const CBlockIndex *);
 // Retrieves any serialization flags requested in command line argument
 int RPCSerializationFlags();
 
-#endif // BITCOIN_RPCSERVER_H
+#endif // DETKCOIN_RPCSERVER_H

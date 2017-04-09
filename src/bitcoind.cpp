@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/bitcoin-config.h"
+#include "config/detkcoin-config.h"
 #endif
 
 #include "chainparams.h"
@@ -31,7 +31,7 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Bitcoin (https://www.bitcoin.org/),
+ * This is the developer documentation of the reference client for an experimental new digital currency called Bitcoin (https://www.detkcoin.org/),
  * which enables instant payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
@@ -71,7 +71,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/bitcoin.conf are parsed in qt/bitcoin.cpp's main()
+    // If Qt is used, parameters/detkcoin.conf are parsed in qt/detkcoin.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
@@ -86,9 +86,9 @@ bool AppInit(int argc, char* argv[])
         else
         {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  bitcoind [options]                     " + strprintf(_("Start %s Daemon"), _(PACKAGE_NAME)) + "\n";
+                  "  detkcoind [options]                     " + strprintf(_("Start %s Daemon"), _(PACKAGE_NAME)) + "\n";
 
-            strUsage += "\n" + HelpMessage(HMM_BITCOIND);
+            strUsage += "\n" + HelpMessage(HMM_DETKCOIND);
         }
 
         fprintf(stdout, "%s", strUsage.c_str());
@@ -104,7 +104,7 @@ bool AppInit(int argc, char* argv[])
         }
         try
         {
-            ReadConfigFile(GetArg("-conf", BITCOIN_CONF_FILENAME));
+            ReadConfigFile(GetArg("-conf", DETKCOIN_CONF_FILENAME));
         } catch (const std::exception& e) {
             fprintf(stderr,"Error reading configuration file: %s\n", e.what());
             return false;
@@ -120,15 +120,15 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "bitcoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "detkcoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)
         {
-            fprintf(stderr, "Error: There is no RPC client functionality in bitcoind anymore. Use the bitcoin-cli utility instead.\n");
+            fprintf(stderr, "Error: There is no RPC client functionality in detkcoind anymore. Use the detkcoin-cli utility instead.\n");
             exit(EXIT_FAILURE);
         }
-        // -server defaults to true for bitcoind but not for the GUI so do this here
+        // -server defaults to true for detkcoind but not for the GUI so do this here
         SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
         InitLogging();
@@ -190,7 +190,7 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    // Connect bitcoind signal handlers
+    // Connect detkcoind signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);

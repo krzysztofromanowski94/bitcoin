@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_COINS_H
-#define BITCOIN_COINS_H
+#ifndef DETKCOIN_COINS_H
+#define DETKCOIN_COINS_H
 
 #include "compressor.h"
 #include "core_memusage.h"
@@ -447,7 +447,7 @@ public:
     size_t DynamicMemoryUsage() const;
 
     /** 
-     * Amount of bitcoins coming in to a transaction
+     * Amount of detkcoins coming in to a transaction
      * Note that lightweight clients may not know anything besides the hash of previous transactions,
      * so may not be able to calculate this.
      *
@@ -472,4 +472,4 @@ private:
     CCoinsViewCache(const CCoinsViewCache &);
 };
 
-#endif // BITCOIN_COINS_H
+#endif // DETKCOIN_COINS_H

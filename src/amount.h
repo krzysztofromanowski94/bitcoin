@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_AMOUNT_H
-#define BITCOIN_AMOUNT_H
+#ifndef DETKCOIN_AMOUNT_H
+#define DETKCOIN_AMOUNT_H
 
 #include "serialize.h"
 
@@ -14,7 +14,7 @@
 /** Amount in satoshis (Can be negative) */
 typedef int64_t CAmount;
 
-static const CAmount COIN = 100000000;
+static const CAmount COIN = 100000000; // ToDo co sądzisz o tym?
 static const CAmount CENT = 1000000;
 
 extern const std::string CURRENCY_UNIT;
@@ -28,7 +28,7 @@ extern const std::string CURRENCY_UNIT;
  * critical; in unusual circumstances like a(nother) overflow bug that allowed
  * for the creation of coins out of thin air modification could lead to a fork.
  * */
-static const CAmount MAX_MONEY = 21000000 * COIN;
+static const CAmount MAX_MONEY = 21000000 * COIN; // ToDo
 inline bool MoneyRange(const CAmount& nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 
 /**
@@ -69,4 +69,4 @@ public:
     }
 };
 
-#endif //  BITCOIN_AMOUNT_H
+#endif //  DETKCOIN_AMOUNT_H

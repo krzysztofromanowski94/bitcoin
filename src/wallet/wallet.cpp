@@ -2425,7 +2425,7 @@ bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend, CWalletT
                 {
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-bitcoin-address
+                    // change transaction isn't always pay-to-detkcoin-address
                     CScript scriptChange;
 
                     // coin control: send change to custom address
@@ -3422,8 +3422,8 @@ void CWallet::GetKeyBirthTimes(std::map<CTxDestination, int64_t> &mapKeyBirth) c
  *   the block time.
  *
  * For more information see CWalletTx::nTimeSmart,
- * https://bitcointalk.org/?topic=54527, or
- * https://github.com/bitcoin/bitcoin/pull/1393.
+ * https://detkcointalk.org/?topic=54527, or
+ * https://github.com/detkcoin/detkcoin/pull/1393.
  */
 unsigned int CWallet::ComputeTimeSmart(const CWalletTx& wtx) const
 {

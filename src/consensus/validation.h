@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CONSENSUS_VALIDATION_H
-#define BITCOIN_CONSENSUS_VALIDATION_H
+#ifndef DETKCOIN_CONSENSUS_VALIDATION_H
+#define DETKCOIN_CONSENSUS_VALIDATION_H
 
 #include <string>
 
@@ -85,4 +85,4 @@ public:
     std::string GetDebugMessage() const { return strDebugMessage; }
 };
 
-#endif // BITCOIN_CONSENSUS_VALIDATION_H
+#endif // DETKCOIN_CONSENSUS_VALIDATION_H

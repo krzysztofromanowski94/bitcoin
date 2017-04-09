@@ -164,8 +164,8 @@
         <translation>Bevestig dat die beursie gekodifiseer is</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DETKCOINS&lt;/b&gt;!</source>
+        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U DETKCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -358,8 +358,8 @@
         <translation>Orebalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en bitcoin: URI's)</translation>
+        <source>Request payments (generates QR codes and detkcoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en detkcoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -370,8 +370,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Skep 'n bitcoin: URI of betalingsversoek</translation>
+        <source>Open a detkcoin: URI or payment request</source>
+        <translation>Skep 'n detkcoin: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -906,7 +906,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>detkcoin-core</name>
     <message>
         <source>Bitcoin Core</source>
         <translation>Bitcoin Kern</translation>

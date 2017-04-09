@@ -4,7 +4,7 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the zapwallettxes functionality.
 
-- start three bitcoind nodes
+- start three detkcoind nodes
 - create four transactions on node 0 - two are confirmed and two are
   unconfirmed.
 - restart node 1 and verify that both the confirmed and the unconfirmed
@@ -61,18 +61,18 @@ class ZapWalletTXesTest (BitcoinTestFramework):
         tx3 = self.nodes[0].gettransaction(txid3)
         assert_equal(tx3['txid'], txid3) #tx3 must be available (unconfirmed)
         
-        #restart bitcoind
+        #restart detkcoind
         self.nodes[0].stop()
-        bitcoind_processes[0].wait()
+        detkcoind_processes[0].wait()
         self.nodes[0] = start_node(0,self.options.tmpdir)
         
         tx3 = self.nodes[0].gettransaction(txid3)
         assert_equal(tx3['txid'], txid3) #tx must be available (unconfirmed)
         
         self.nodes[0].stop()
-        bitcoind_processes[0].wait()
+        detkcoind_processes[0].wait()
         
-        #restart bitcoind with zapwallettxes
+        #restart detkcoind with zapwallettxes
         self.nodes[0] = start_node(0,self.options.tmpdir, ["-zapwallettxes=1"])
         
         assert_raises(JSONRPCException, self.nodes[0].gettransaction, [txid3])

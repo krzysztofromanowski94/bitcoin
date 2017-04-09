@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPCPROTOCOL_H
-#define BITCOIN_RPCPROTOCOL_H
+#ifndef DETKCOIN_RPCPROTOCOL_H
+#define DETKCOIN_RPCPROTOCOL_H
 
 #include <list>
 #include <map>
@@ -38,7 +38,7 @@ enum RPCErrorCode
     // It should not be used for application-layer errors.
     RPC_METHOD_NOT_FOUND = -32601,
     RPC_INVALID_PARAMS   = -32602,
-    // RPC_INTERNAL_ERROR should only be used for genuine errors in bitcoind
+    // RPC_INTERNAL_ERROR should only be used for genuine errors in detkcoind
     // (for example datadir corruption).
     RPC_INTERNAL_ERROR   = -32603,
     RPC_PARSE_ERROR      = -32700,
@@ -97,4 +97,4 @@ bool GetAuthCookie(std::string *cookie_out);
 /** Delete RPC authentication cookie from disk */
 void DeleteAuthCookie();
 
-#endif // BITCOIN_RPCPROTOCOL_H
+#endif // DETKCOIN_RPCPROTOCOL_H

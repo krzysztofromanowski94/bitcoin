@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Scegli l'indirizzo a cui inviare bitcoin</translation>
+        <translation>Scegli l'indirizzo a cui inviare detkcoin</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Scegli l'indirizzo con cui ricevere bitcoin</translation>
+        <translation>Scegli l'indirizzo con cui ricevere detkcoin</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questo è un elenco di indirizzi Bitcoin a cui puoi inviare pagamenti. Controlla sempre l'importo e l'indirizzo del beneficiario prima di inviare bitcoin.</translation>
+        <translation>Questo è un elenco di indirizzi Bitcoin a cui puoi inviare pagamenti. Controlla sempre l'importo e l'indirizzo del beneficiario prima di inviare detkcoin.</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
@@ -168,8 +168,8 @@
         <translation>Conferma la cifratura del portamonete</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Attenzione: perdendo la passphrase di un portamonete cifrato &lt;b&gt;TUTTI I PROPRI BITCOIN ANDRANNO PERSI&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DETKCOINS&lt;/b&gt;!</source>
+        <translation>Attenzione: perdendo la passphrase di un portamonete cifrato &lt;b&gt;TUTTI I PROPRI DETKCOIN ANDRANNO PERSI&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -370,8 +370,8 @@
         <translation>Barra degli strumenti</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and detkcoin: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e detkcoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -382,8 +382,8 @@
         <translation>Mostra la lista degli indirizzi di ricezione utilizzati</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Apri un bitcoin: URI o una richiesta di pagamento</translation>
+        <source>Open a detkcoin: URI or payment request</source>
+        <translation>Apri un detkcoin: URI o una richiesta di pagamento</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -934,7 +934,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Scegli l'unità di suddivisione predefinita da utilizzare per l'interfaccia e per l'invio di bitcoin.</translation>
+        <translation>Scegli l'unità di suddivisione predefinita da utilizzare per l'interfaccia e per l'invio di detkcoin.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1586,7 +1586,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>somma almeno</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for detkcoin transactions than the network can process.</source>
         <translation>Non vi è alcuna controindicazione a pagare la commissione minima, a patto che il volume delle transazioni sia inferiore allo spazio disponibile nei blocchi. Occorre comunque essere consapevoli che ciò potrebbe impedire la conferma delle transazioni nel caso in cui la rete risultasse satura.</translation>
     </message>
     <message>
@@ -1693,8 +1693,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Rimuovi questa voce</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>La commissione sarà sottratta dall'importo che si sta inviando. Il beneficiario riceverà un totale di bitcoin inferiore al valore digitato. Nel caso in cui siano stati selezionati più beneficiari la commissione sarà suddivisa in parti uguali.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less detkcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>La commissione sarà sottratta dall'importo che si sta inviando. Il beneficiario riceverà un totale di detkcoin inferiore al valore digitato. Nel caso in cui siano stati selezionati più beneficiari la commissione sarà suddivisa in parti uguali.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1717,8 +1717,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Inserisci un'etichetta per questo indirizzo per aggiungerlo alla lista degli indirizzi utilizzati</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Messaggio incluso nel bitcoin URI e che sarà memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sarà inviato attraverso la rete Bitcoin.</translation>
+        <source>A message that was attached to the detkcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <translation>Messaggio incluso nel detkcoin URI e che sarà memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sarà inviato attraverso la rete Bitcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1754,8 +1754,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>&amp;Firma Messaggio</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>È possibile firmare messaggi/accordi con i propri indirizzi in modo da dimostrare di poter ricevere bitcoin attraverso di essi. Si consiglia di prestare attenzione a non firmare dichiarazioni vaghe o casuali, attacchi di phishing potrebbero cercare di indurre ad apporre la firma su di esse. Si raccomanda di firmare esclusivamente dichiarazioni completamente dettagliate e delle quali si condivide in pieno il contenuto.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive detkcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>È possibile firmare messaggi/accordi con i propri indirizzi in modo da dimostrare di poter ricevere detkcoin attraverso di essi. Si consiglia di prestare attenzione a non firmare dichiarazioni vaghe o casuali, attacchi di phishing potrebbero cercare di indurre ad apporre la firma su di esse. Si raccomanda di firmare esclusivamente dichiarazioni completamente dettagliate e delle quali si condivide in pieno il contenuto.</translation>
     </message>
     <message>
         <source>The Bitcoin address to sign the message with</source>
@@ -1901,7 +1901,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>detkcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opzioni:</translation>

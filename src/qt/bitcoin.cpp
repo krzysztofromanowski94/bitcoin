@@ -3,10 +3,10 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/bitcoin-config.h"
+#include "config/detkcoin-config.h"
 #endif
 
-#include "bitcoingui.h"
+#include "detkcoingui.h"
 
 #include "chainparams.h"
 #include "clientmodel.h"
@@ -92,7 +92,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("bitcoin-core", psz).toStdString();
+    return QCoreApplication::translate("detkcoin-core", psz).toStdString();
 }
 
 static QString GetLangTerritory()
@@ -139,11 +139,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in bitcoin.qrc)
+    // Load e.g. detkcoin_de.qm (shortcut "de" needs to be defined in detkcoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in bitcoin.qrc)
+    // Load e.g. detkcoin_de_DE.qm (shortcut "de_DE" needs to be defined in detkcoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -251,7 +251,7 @@ private:
     void startThread();
 };
 
-#include "bitcoin.moc"
+#include "detkcoin.moc"
 
 BitcoinCore::BitcoinCore():
     QObject()
@@ -493,7 +493,7 @@ void BitcoinApplication::initializeResult(bool success)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // bitcoin: URIs or payment requests:
+        // detkcoin: URIs or payment requests:
         connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                          window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
         connect(window, SIGNAL(receivedURI(QString)),
@@ -526,7 +526,7 @@ WId BitcoinApplication::getMainWinId() const
     return window->winId();
 }
 
-#ifndef BITCOIN_QT_TEST
+#ifndef DETKCOIN_QT_TEST
 int main(int argc, char *argv[])
 {
     SetupEnvironment();
@@ -544,8 +544,8 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
 
-    Q_INIT_RESOURCE(bitcoin);
-    Q_INIT_RESOURCE(bitcoin_locale);
+    Q_INIT_RESOURCE(detkcoin);
+    Q_INIT_RESOURCE(detkcoin_locale);
 
     BitcoinApplication app(argc, argv);
 #if QT_VERSION > 0x050100
@@ -600,7 +600,7 @@ int main(int argc, char *argv[])
     if (!Intro::pickDataDirectory())
         return EXIT_SUCCESS;
 
-    /// 6. Determine availability of data directory and parse bitcoin.conf
+    /// 6. Determine availability of data directory and parse detkcoin.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!boost::filesystem::is_directory(GetDataDir(false)))
     {
@@ -609,7 +609,7 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
     try {
-        ReadConfigFile(GetArg("-conf", BITCOIN_CONF_FILENAME));
+        ReadConfigFile(GetArg("-conf", DETKCOIN_CONF_FILENAME));
     } catch (const std::exception& e) {
         QMessageBox::critical(0, QObject::tr(PACKAGE_NAME),
                               QObject::tr("Error: Cannot parse configuration file: %1. Only use key=value syntax.").arg(e.what()));
@@ -652,7 +652,7 @@ int main(int argc, char *argv[])
         exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // bitcoin: links repeatedly have their payment requests routed to this process:
+    // detkcoin: links repeatedly have their payment requests routed to this process:
     app.createPaymentServer();
 #endif
 
@@ -700,4 +700,4 @@ int main(int argc, char *argv[])
     }
     return app.getReturnValue();
 }
-#endif // BITCOIN_QT_TEST
+#endif // DETKCOIN_QT_TEST

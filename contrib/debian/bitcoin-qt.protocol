@@ -1,6 +1,6 @@
 [Protocol]
-exec=bitcoin-qt '%u'
-protocol=bitcoin
+exec=detkcoin-qt '%u'
+protocol=detkcoin
 input=none
 output=none
 helper=true

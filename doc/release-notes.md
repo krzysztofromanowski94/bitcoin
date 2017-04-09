@@ -3,18 +3,18 @@ release-notes at release time)
 
 Bitcoin Core version *version* is now available from:
 
-  <https://bitcoin.org/bin/bitcoin-core-*version*/>
+  <https://detkcoin.org/bin/detkcoin-core-*version*/>
 
 This is a new major version release, including new features, various bugfixes
 and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/detkcoin/detkcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://bitcoincore.org/en/list/announcements/join/>
+  <https://detkcoincore.org/en/list/announcements/join/>
 
 Compatibility
 ==============
@@ -49,13 +49,13 @@ Low-level RPC changes
   or subnet is invalid. Previously returned RPC_CLIENT_NODE_ALREADY_ADDED.
   - `setban` now returns RPC_CLIENT_INVALID_IP_OR_SUBNET if the user tries to unban
   a node that has not previously been banned. Previously returned RPC_MISC_ERROR.
-  - `removeprunedfunds` now returns RPC_WALLET_ERROR if bitcoind is unable to remove
+  - `removeprunedfunds` now returns RPC_WALLET_ERROR if detkcoind is unable to remove
   the transaction. Previously returned RPC_INTERNAL_ERROR.
   - `removeprunedfunds` now returns RPC_INVALID_PARAMETER if the transaction does not
   exist in the wallet. Previously returned RPC_INTERNAL_ERROR.
   - `fundrawtransaction` now returns RPC_INVALID_ADDRESS_OR_KEY if an invalid change
   address is provided. Previously returned RPC_INVALID_PARAMETER.
-  - `fundrawtransaction` now returns RPC_WALLET_ERROR if bitcoind is unable to create
+  - `fundrawtransaction` now returns RPC_WALLET_ERROR if detkcoind is unable to create
   the transaction. The error message provides further details. Previously returned
   RPC_INTERNAL_ERROR.
   - `bumpfee` now returns RPC_INVALID_PARAMETER if the provided transaction has
@@ -88,4 +88,4 @@ Credits
 Thanks to everyone who directly contributed to this release:
 
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/detkcoin/).

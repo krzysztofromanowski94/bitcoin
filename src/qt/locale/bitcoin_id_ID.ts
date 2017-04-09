@@ -230,8 +230,8 @@
         <translation>Baris tab</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Permintaan pembayaran (membuat kode QR dan bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and detkcoin: URIs)</source>
+        <translation>Permintaan pembayaran (membuat kode QR dan detkcoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -242,8 +242,8 @@
         <translation>Tampilkan daftar alamat dan label yang diterima</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Buka URI bitcoin: atau permintaan pembayaran</translation>
+        <source>Open a detkcoin: URI or payment request</source>
+        <translation>Buka URI detkcoin: atau permintaan pembayaran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1374,7 +1374,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>detkcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Pilihan:</translation>
